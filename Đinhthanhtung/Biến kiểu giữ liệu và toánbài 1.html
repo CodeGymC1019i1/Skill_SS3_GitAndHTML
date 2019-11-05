@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let vatly;
+    let hoahoc;
+    let  sinhhoc;
+    vatly=prompt("Nhap diem mon vat ly:");
+    hoahoc= prompt("nhap diem mon hoa hoc:");
+    sinhhoc = prompt("nhap diem mon sinh hoc:");
+    vatly=parseFloat(vatly);
+    hoahoc=parseFloat(hoahoc);
+    sinhhoc=parseFloat(sinhhoc);
+    let  diemtb= (vatly+hoahoc+sinhhoc)/3;
+    document.write("Diem Trung Binh = "+diemtb);
+    document.write("</br>");
+    let tong=vatly+hoahoc+sinhhoc;
+    document.write("Tong cua 3 mon ="+tong);
+    document.write("</br>");
+</script>
+</body>
+</html>
