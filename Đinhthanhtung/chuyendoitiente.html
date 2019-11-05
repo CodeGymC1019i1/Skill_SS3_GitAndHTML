@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-so tien <input type="number">;
+so tien <input type="number" id="number">;
 <br>
 tien goc<select id="fromMoney">
     <option value="usd">USD</option>
@@ -16,15 +16,19 @@ tien doi<select id="toMoney">
     <option value="vnd">VND</option>
 </select>
 <br>
-<input type="button" value="doitien" onclick="changeMoney();">
+<input type="button" value="doitien" onclick="changeMoney() ;">
 <span id="result"></span>
 <script>
     function changeMoney() {
         let number=document.getElementById('number').value;
         let fromMoney=document.getElementById('fromMoney').value;
         let toMoney=document.getElementById('toMoney').value;
-        let result;
-        if(fromMoney=="usd" && toMoney=="vnd")
+        let result=number;
+        if(fromMoney=="usd" && toMoney=="vnd"){
+            result=number*23000;
+        }else if (fromMoney=="vnd" && toMoney=="usd")
+            result=number/23000;
+        document.getElementById('result').innerText="so tien sau chuyen doi la: "+result;
 
     }
 </script>
